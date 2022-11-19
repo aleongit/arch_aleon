@@ -131,7 +131,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 exit
 umount -R /mnt
 reboot
-> 1st boot of new Arch!
+> Booting new Arch!
 ```
 
 ## Network (with networkmanager)
@@ -187,4 +187,20 @@ sudo systemctl status sshd
 ## Utils
 ```
 pacman -S neofetch
+```
+
+## Installing X server, Desktop Environment and Display Manager
+```
+sudo pacman -S xorg xorg-server
+sudo pacman -S gnome
+sudo systemctl enable gdm.service
+sudo systemctl start gdm.service
+sudo pacman -S arc-gtk-theme
+sudo pacman -S archlinux-wallpaper
+sudo reboot
+```
+
+## VmWare Tools
+```
+sudo pacman -Su xf86-input-vmmouse xf86-video-vmware mesa gtk2 gtkmm
 ```
