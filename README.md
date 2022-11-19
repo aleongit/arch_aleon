@@ -187,20 +187,32 @@ sudo systemctl status sshd
 ## Utils
 ```
 pacman -S neofetch
+pacman -S archlinux-wallpaper
+> /usr/share/backgrounds/archlinux/
 ```
 
 ## Installing X server, Desktop Environment and Display Manager
+
+### Gnome
 ```
 sudo pacman -S xorg xorg-server
 sudo pacman -S gnome
 sudo systemctl enable gdm.service
 sudo systemctl start gdm.service
-sudo pacman -S arc-gtk-theme
-sudo pacman -S archlinux-wallpaper
 sudo reboot
 ```
 
-## VmWare Tools
+### KDE
 ```
-sudo pacman -Su xf86-input-vmmouse xf86-video-vmware mesa gtk2 gtkmm
+sudo pacman -S --needed xorg sddm
+sudo pacman -S --needed plasma kde-applications
+sudo systemctl enable sddm
+sudo nano /usr/lib/sddm/sddm.conf.d/default.conf
+reboot
 ```
+
+# VmWare 100% CPU guest usage / Windows WSL conflict
+* Opció 'Virtualize Intel VT-x/EPT or AMD-V/RVI' activada a VM CPU Settings
+* Si no deixa activar-la:
+    * Cal desactivar característica Windows 'Plataforma de Màquina Virtual' necessària per WSL
+    * També cal tenir desactivada característica 'Hyper-V'
