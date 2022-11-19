@@ -187,6 +187,9 @@ sudo systemctl status sshd
 ## Utils
 ```
 pacman -S neofetch
+pacman -S cmatrix
+pacman -S glances
+pacman -S filelight
 pacman -S archlinux-wallpaper
 > /usr/share/backgrounds/archlinux/
 ```
