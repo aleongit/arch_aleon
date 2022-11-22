@@ -189,7 +189,7 @@ sudo systemctl status sshd
 pacman -S neofetch
 pacman -S cmatrix
 pacman -S glances
-pacman -S filelight
+pacman -S git
 pacman -S archlinux-wallpaper
 > /usr/share/backgrounds/archlinux/
 ```
