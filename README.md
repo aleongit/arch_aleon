@@ -176,6 +176,14 @@ loggin as aleon
 sudo pacman -Syu
 ```
 
+## Update system - ERRORS pacman when you want to update system
+
+maybe you need to renew keys
+```
+sudo pacman -Sy archlinux-keyring
+sudo pacman -Syu
+```
+
 ## SSH
 ```
 sudo pacman -S openssh
