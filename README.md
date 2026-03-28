@@ -194,6 +194,7 @@ sudo systemctl status sshd
 
 ## Utils
 ```
+sudo pacman -S htop
 pacman -S neofetch
 pacman -S cmatrix
 pacman -S glances
