@@ -176,11 +176,18 @@ loggin as aleon
 sudo pacman -Syu
 ```
 
-## Update system - ERRORS pacman when you want to update system
+## Update system - ERRORS! when you want to update system
 
 maybe you need to renew keys
 ```
 sudo pacman -Sy archlinux-keyring
+```
+maybe you nedd to delete files
+```
+sudo rm -R /usr/lib/firmware/nvidia/ad*
+```
+Finally, update the system
+```
 sudo pacman -Syu
 ```
 
